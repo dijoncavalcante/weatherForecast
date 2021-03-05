@@ -1,11 +1,15 @@
 package com.dijon.forecastactivity.view
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.dijon.forecastactivity.R
 
 class MainActivity : AppCompatActivity() {
@@ -19,6 +23,18 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
+        val viewModel = ViewModelProvider(this).get(ForecastViewModel::class.java)
+
+        viewModel.getForecast()
+
+        viewModel.results.observe(this, Observer {
+            //set adapter com a lista
+            Log.d("MainActivity", "getForecast: ${it!!.city.name}")
+            Log.d("MainActivity", "getForecast: ${it!!.list[0].weather[0].description}")
+            Log.d("MainActivity", "getForecast: ${it!!.list[0].main.temp_max}")
+        })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
