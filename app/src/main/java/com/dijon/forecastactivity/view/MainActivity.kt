@@ -23,7 +23,10 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+        val textView: TextView = findViewById(R.id.textView_forecast) as TextView
+        textView.setOnClickListener {
 
+        }
         val viewModel = ViewModelProvider(this).get(ForecastViewModel::class.java)
 
         viewModel.getForecast()
@@ -33,7 +36,10 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "getForecast: ${it!!.city.name}")
             Log.d("MainActivity", "getForecast: ${it!!.list[0].weather[0].description}")
             Log.d("MainActivity", "getForecast: ${it!!.list[0].main.temp_max}")
+            ("Cidade: "+ it!!.city.name + " Descrição: "+it!!.list[0].weather[0].description +" temperatura MAX: "+ it!!.list[0].main.temp_max).also { textView.text = it }
         })
+
+
 
     }
 
