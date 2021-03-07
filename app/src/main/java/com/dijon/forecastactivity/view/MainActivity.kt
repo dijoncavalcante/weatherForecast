@@ -28,9 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         val viewModel = ViewModelProvider(this).get(ForecastViewModel::class.java)
-
         viewModel.getForecast()
-
         viewModel.results.observe(this, Observer {
             //set adapter com a lista
             Log.d("MainActivity", "getForecast: ${it!!.city.name}")
@@ -38,6 +36,8 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "getForecast: ${it!!.list[0].main.temp_max}")
             ("Cidade: "+ it!!.city.name + " Descrição: "+it!!.list[0].weather[0].description +" temperatura MAX: "+ it!!.list[0].main.temp_max).also { textView.text = it }
         })
+
+
 
 
 
