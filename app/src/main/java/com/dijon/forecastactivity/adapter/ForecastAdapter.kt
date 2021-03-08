@@ -64,11 +64,6 @@ class ForecastAdapter(private val listData: WeatherResult) :
         private val tv_main_temp_max_5: TextView = itemView.findViewById(R.id.tv_main_temp_max_5)
         private val tv_main_temp_min_5: TextView = itemView.findViewById(R.id.tv_main_temp_min_5)
 
-        //card Sex
-        private val tv_dt_txt_6: TextView = itemView.findViewById(R.id.tv_dt_txt_6)
-        private val tv_main_temp_max_6: TextView = itemView.findViewById(R.id.tv_main_temp_max_6)
-        private val tv_main_temp_min_6: TextView = itemView.findViewById(R.id.tv_main_temp_min_6)
-
         //card 3 Detail
         private val tv_city_population: TextView = itemView.findViewById(R.id.tv_city_population)
         private val tv_city_sunrise: TextView = itemView.findViewById(R.id.tv_city_sunrise)
@@ -107,7 +102,7 @@ class ForecastAdapter(private val listData: WeatherResult) :
             }
 
             //card 2 hoje
-            tv_dt_txt_1.text = "Today"
+            tv_dt_txt_1.text = checkDayOfWeek(resultados[0].dt_txt)
             "${
                 resultados[0].main.temp_max.toString().subSequence(0, 2)
             }°".also { tv_main_temp_max_1.text = it }
@@ -146,15 +141,6 @@ class ForecastAdapter(private val listData: WeatherResult) :
             "${
                 resultados[4].main.temp_min.toString().subSequence(0, 2)
             }°".also { tv_main_temp_min_5.text = it }
-            //card Sex
-            tv_dt_txt_6.text = checkDayOfWeek(resultados[5].dt_txt)
-            "${
-                resultados[5].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_6.text = it }
-            "${
-                resultados[5].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_6.text = it }
-
             //card 3 Detail
             tv_city_population.text = data.city.population.toString()
             tv_city_sunrise.text =

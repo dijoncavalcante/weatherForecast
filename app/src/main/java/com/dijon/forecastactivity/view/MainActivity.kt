@@ -10,7 +10,10 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.dijon.forecastactivity.R
+import com.dijon.forecastactivity.adapter.ForecastAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,15 +22,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-
+        val rv_home_main: RecyclerView = findViewById(R.id.rv_home_main)
+        rv_home_main.layoutManager = LinearLayoutManager(this)
 
         val viewModel = ViewModelProvider(this).get(ForecastViewModel::class.java)
         viewModel.getForecast()
         viewModel.results.observe(this, Observer {
             //set adapter com a lista
-            Log.d("MainActivity", "getForecast: ${it!!.city.name}")
-            Log.d("MainActivity", "getForecast: ${it!!.list[0].weather[0].description}")
-            Log.d("MainActivity", "getForecast: ${it!!.list[0].main.temp_max}")
+            val adapterForecastAdapter = ForecastAdapter(it)
+            rv_home_main.adapter = adapterForecastAdapter;
         })
     }
 
