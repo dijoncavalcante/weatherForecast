@@ -26,8 +26,55 @@
         android:text="1598210"
         app:layout_constraintBottom_toBottomOf="@+id/tv_city_population_label"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toEndOf="@+id/tv_city_population_label"
-        app:layout_constraintTop_toTopOf="@+id/tv_city_population_label" />
+        app:layout_constraintTop_toTopOf="@+id/tv_city_population_label"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_city_sunrise"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="right"
+        android:text="1614938824"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_city_sunrise_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toEndOf="@+id/tv_city_sunrise_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_city_sunrise_label"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_city_sunset"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="right"
+        android:text="1614982579"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_city_sunset_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toEndOf="@+id/tv_city_sunset_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_city_sunset_label"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_main_humidity"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:gravity="right"
+        android:text="97%"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_main_humidity_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toEndOf="@+id/tv_main_humidity_label"
+        app:layout_constraintTop_toTopOf="@+id/tv_main_humidity_label"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_city_sunrise_label"
@@ -41,19 +88,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_city_population_label" />
 
     <TextView
-        android:id="@+id/tv_city_sunrise"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="right"
-        android:text="1614938824"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_city_sunrise_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_city_sunrise_label"
-        app:layout_constraintTop_toTopOf="@+id/tv_city_sunrise_label" />
-
-    <TextView
         android:id="@+id/tv_city_sunset_label"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -63,21 +97,6 @@
         android:text="Sunset"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_city_sunrise_label" />
-
-    <TextView
-        android:id="@+id/tv_city_sunset"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="right"
-        android:text="1614982579"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_city_sunset_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
-        app:layout_constraintStart_toEndOf="@+id/tv_city_sunset_label"
-        app:layout_constraintTop_toTopOf="@+id/tv_city_sunset_label"
-        app:layout_constraintVertical_bias="0.04" />
 
     <TextView
         android:id="@+id/tv_main_humidity_label"
@@ -93,18 +112,4 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_city_sunset_label"
         app:layout_constraintVertical_bias="0.779" />
 
-    <TextView
-        android:id="@+id/tv_main_humidity"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="right"
-        android:text="97%"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_main_humidity_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toEndOf="@+id/tv_main_humidity_label"
-        app:layout_constraintTop_toTopOf="@+id/tv_main_humidity_label"
-        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
