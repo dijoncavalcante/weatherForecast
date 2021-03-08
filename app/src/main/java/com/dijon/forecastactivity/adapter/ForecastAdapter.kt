@@ -33,63 +33,61 @@ class ForecastAdapter(private val listData: WeatherResult) :
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //card 1
-        private val tv_city_name: TextView = itemView.findViewById(R.id.tv_city_name)
-        private val tv_dt_txt: TextView = itemView.findViewById(R.id.tv_dt_txt)
-        private val tv_main_temp_: TextView = itemView.findViewById(R.id.tv_main_temp_)
-        private val tv_mix_temp: TextView = itemView.findViewById(R.id.tv_mix_temp)
-        private val tv_weather_main_: TextView = itemView.findViewById(R.id.tv_weather_main_)
+        private val tvCityName = itemView.findViewById<TextView>(R.id.tv_city_name)
+        private val tvDtTxt = itemView.findViewById<TextView>(R.id.tv_dt_txt)
+        private val tvMainTemp = itemView.findViewById<TextView>(R.id.tv_main_temp_)
+        private val tvMixTemp = itemView.findViewById<TextView>(R.id.tv_mix_temp)
+        private val tvWeatherMain = itemView.findViewById<TextView>(R.id.tv_weather_main_)
 
         //card 2 hoje
-        private val tv_dt_txt_1: TextView = itemView.findViewById(R.id.tv_dt_txt_1)
-        private val tv_main_temp_max_1: TextView = itemView.findViewById(R.id.tv_main_temp_max_1)
-        private val tv_main_temp_min_1: TextView = itemView.findViewById(R.id.tv_main_temp_min_1)
+        private val tvDtTxt1 = itemView.findViewById<TextView>(R.id.tv_dt_txt_1)
+        private val tvMainTempMax1 = itemView.findViewById<TextView>(R.id.tv_main_temp_max_1)
+        private val tvMainTempMin1 = itemView.findViewById<TextView>(R.id.tv_main_temp_min_1)
 
         //card 2 Ter
-        private val tv_dt_txt_2: TextView = itemView.findViewById(R.id.tv_dt_txt_2)
-        private val tv_main_temp_max_2: TextView = itemView.findViewById(R.id.tv_main_temp_max_2)
-        private val tv_main_temp_min_2: TextView = itemView.findViewById(R.id.tv_main_temp_min_2)
+        private val tvDtTxt2 = itemView.findViewById<TextView>(R.id.tv_dt_txt_2)
+        private val tvMainTempMax2 = itemView.findViewById<TextView>(R.id.tv_main_temp_max_2)
+        private val tvMainTempMin2 = itemView.findViewById<TextView>(R.id.tv_main_temp_min_2)
 
         //card 2 Qua
-        private val tv_dt_txt_3: TextView = itemView.findViewById(R.id.tv_dt_txt_3)
-        private val tv_main_temp_max_3: TextView = itemView.findViewById(R.id.tv_main_temp_max_3)
-        private val tv_main_temp_min_3: TextView = itemView.findViewById(R.id.tv_main_temp_min_3)
+        private val tvDtTxt3 = itemView.findViewById<TextView>(R.id.tv_dt_txt_3)
+        private val tvMainTempMax3 = itemView.findViewById<TextView>(R.id.tv_main_temp_max_3)
+        private val tvMainTempMin3 = itemView.findViewById<TextView>(R.id.tv_main_temp_min_3)
 
         //card 2 Qui
-        private val tv_dt_txt_4: TextView = itemView.findViewById(R.id.tv_dt_txt_4)
-        private val tv_main_temp_max_4: TextView = itemView.findViewById(R.id.tv_main_temp_max_4)
-        private val tv_main_temp_min_4: TextView = itemView.findViewById(R.id.tv_main_temp_min_4)
+        private val tvDtTxt4 = itemView.findViewById<TextView>(R.id.tv_dt_txt_4)
+        private val tvMainTempMax4 = itemView.findViewById<TextView>(R.id.tv_main_temp_max_4)
+        private val tvMainTempMin4 = itemView.findViewById<TextView>(R.id.tv_main_temp_min_4)
 
         //card 2 Sex
-        private val tv_dt_txt_5: TextView = itemView.findViewById(R.id.tv_dt_txt_5)
-        private val tv_main_temp_max_5: TextView = itemView.findViewById(R.id.tv_main_temp_max_5)
-        private val tv_main_temp_min_5: TextView = itemView.findViewById(R.id.tv_main_temp_min_5)
+        private val tvDtTxt5 = itemView.findViewById<TextView>(R.id.tv_dt_txt_5)
+        private val tvMainTempMax5 = itemView.findViewById<TextView>(R.id.tv_main_temp_max_5)
+        private val tvMainTempMin5 = itemView.findViewById<TextView>(R.id.tv_main_temp_min_5)
 
         //card 3 Detail
-        private val tv_city_population: TextView = itemView.findViewById(R.id.tv_city_population)
-        private val tv_city_sunrise: TextView = itemView.findViewById(R.id.tv_city_sunrise)
-        private val tv_city_sunset: TextView = itemView.findViewById(R.id.tv_city_sunset)
-        private val tv_main_humidity: TextView = itemView.findViewById(R.id.tv_main_humidity)
+        private val tvCityPopulation = itemView.findViewById<TextView>(R.id.tv_city_population)
+        private val tvCitySunrise = itemView.findViewById<TextView>(R.id.tv_city_sunrise)
+        private val tvCitySunset = itemView.findViewById<TextView>(R.id.tv_city_sunset)
+        private val tvMainHumidity = itemView.findViewById<TextView>(R.id.tv_main_humidity)
 
         //
-        private val tv_dt_txt_last_update: TextView =
-            itemView.findViewById(R.id.tv_dt_txt_last_update)
+        private val tvDtTxtLastUpdate = itemView.findViewById<TextView>(R.id.tv_dt_txt_last_update)
 
         @RequiresApi(Build.VERSION_CODES.O)
         fun bindView(data: WeatherResult) {
             //card 1
-            tv_city_name.text = data.city.name
-            tv_dt_txt.text = SimpleDateFormat(
+            tvCityName.text = data.city.name
+            tvDtTxt.text = SimpleDateFormat(
                 "dd/MM/yyyy hh:mm a",
                 Locale.ENGLISH
             ).format(Date(data.list.get(0).dt * 1000L))
-            tv_main_temp_.text = "${data.list.get(0).main.temp.toString().subSequence(0, 2)}°C"
-            tv_mix_temp.text =
-                "${
-                    data.list.get(0).main.temp_max.toString().subSequence(0, 2)
-                }°/${data.list.get(0).main.temp_min.toString().subSequence(0, 2)}° Feels like ${
-                    data.list.get(0).main.feels_like.toString().subSequence(0, 2)
-                }°"
-            tv_weather_main_.text = data.list.get(0).weather[0].main
+            tvMainTemp.text = "${data.list.get(0).main.temp.toString().subSequence(0, 2)}°C"
+            "${
+                data.list.get(0).main.temp_max.toString().subSequence(0, 2)
+            }°/${data.list.get(0).main.temp_min.toString().subSequence(0, 2)}° Feels like ${
+                data.list.get(0).main.feels_like.toString().subSequence(0, 2)
+            }°".also { tvMixTemp.text = it }
+            tvWeatherMain.text = data.list.get(0).weather[0].main
 
             var resultados = ArrayList<ListResult>().toMutableList()
             var dateAnterior: String = "00/00/0000 00:00:00"
@@ -102,52 +100,52 @@ class ForecastAdapter(private val listData: WeatherResult) :
             }
 
             //card 2 hoje
-            tv_dt_txt_1.text = checkDayOfWeek(resultados[0].dt_txt)
+            tvDtTxt1.text = checkDayOfWeek(resultados[0].dt_txt)
             "${
                 resultados[0].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_1.text = it }
+            }°".also { tvMainTempMax1.text = it }
             "${
                 resultados[0].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_1.text = it }
+            }°".also { tvMainTempMin1.text = it }
             // card 2 Ter
-            tv_dt_txt_2.text = checkDayOfWeek(resultados[1].dt_txt)
+            tvDtTxt2.text = checkDayOfWeek(resultados[1].dt_txt)
             "${
                 resultados[1].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_2.text = it }
+            }°".also { tvMainTempMax2.text = it }
             "${
                 resultados[1].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_2.text = it }
+            }°".also { tvMainTempMin2.text = it }
             //card 2 Qua
-            tv_dt_txt_3.text = checkDayOfWeek(resultados[2].dt_txt)
+            tvDtTxt3.text = checkDayOfWeek(resultados[2].dt_txt)
             "${
                 resultados[2].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_3.text = it }
+            }°".also { tvMainTempMax3.text = it }
             "${
                 resultados[2].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_3.text = it }
+            }°".also { tvMainTempMin3.text = it }
             //card 2 Qui
-            tv_dt_txt_4.text = checkDayOfWeek(resultados[3].dt_txt)
+            tvDtTxt4.text = checkDayOfWeek(resultados[3].dt_txt)
             "${
                 resultados[3].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_4.text = it }
+            }°".also { tvMainTempMax4.text = it }
             "${
                 resultados[3].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_4.text = it }
+            }°".also { tvMainTempMin4.text = it }
             //card 2 Sex
-            tv_dt_txt_5.text = checkDayOfWeek(resultados[4].dt_txt)
+            tvDtTxt5.text = checkDayOfWeek(resultados[4].dt_txt)
             "${
                 resultados[4].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_5.text = it }
+            }°".also { tvMainTempMax5.text = it }
             "${
                 resultados[4].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_5.text = it }
+            }°".also { tvMainTempMin5.text = it }
             //card 3 Detail
-            tv_city_population.text = data.city.population.toString()
-            tv_city_sunrise.text =
+            tvCityPopulation.text = data.city.population.toString()
+            tvCitySunrise.text =
                 SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(data.city.sunrise * 1000L))
-            tv_city_sunset.text =
+            tvCitySunset.text =
                 SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(data.city.sunset * 1000L))
-            tv_main_humidity.text = data.list.get(0).main.humidity.toString() + "%";
+            (data.list.get(0).main.humidity.toString() + "%").also { tvMainHumidity.text = it };
 
             //card 4 Data last update
             ("${checkDayOfWeek(Calendar.getInstance().get(Calendar.DAY_OF_WEEK))} " +
@@ -160,7 +158,7 @@ class ForecastAdapter(private val listData: WeatherResult) :
                     }" +
                     " ${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${
                         Calendar.getInstance().get(Calendar.MINUTE)
-                    }").also { tv_dt_txt_last_update.text = it }
+                    }").also { tvDtTxtLastUpdate.text = it }
         }
 
     }
