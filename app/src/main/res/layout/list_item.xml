@@ -29,6 +29,7 @@
                     android:id="@+id/tv_city_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
                     android:gravity="center_horizontal"
                     android:hint="Manaus"
                     android:textAllCaps="true"
@@ -40,6 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:textSize="18sp"
                     android:hint="2021-03-05 21:00:00" />
 
 
@@ -49,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:hint="28.05"
-                    android:textSize="40sp" />
+                    android:textSize="60sp" />
 
 
                 <TextView
@@ -64,6 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:layout_marginBottom="32dp"
                     android:hint="Chuva" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -81,7 +84,9 @@
         android:id="@+id/tv_Daily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Daily"
+        android:layout_marginBottom="5dp"
+        android:text="Daily"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -107,7 +112,9 @@
         android:id="@+id/tv_detail_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:text="Detail"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold" />
 

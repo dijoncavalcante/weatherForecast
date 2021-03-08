@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
 
         val rv_home_main: RecyclerView = findViewById(R.id.rv_home_main)
         rv_home_main.layoutManager = LinearLayoutManager(this)
