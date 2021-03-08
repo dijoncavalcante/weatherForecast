@@ -133,7 +133,7 @@
         android:layout_height="2dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/design_default_color_secondary_variant"
+        android:background="@color/semiTransparentColor"
         android:focusable="false" />
 
     <TextView
@@ -141,5 +141,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:hint="2021-03-05 21:00:00" />
+        android:hint="2021-03-05 21:00:00"
+        android:layout_marginBottom="32dp"/>
 </LinearLayout>
