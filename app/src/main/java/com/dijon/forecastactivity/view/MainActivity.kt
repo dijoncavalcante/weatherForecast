@@ -19,10 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+
 
         val viewModel = ViewModelProvider(this).get(ForecastViewModel::class.java)
         viewModel.getForecast()
@@ -31,13 +28,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "getForecast: ${it!!.city.name}")
             Log.d("MainActivity", "getForecast: ${it!!.list[0].weather[0].description}")
             Log.d("MainActivity", "getForecast: ${it!!.list[0].main.temp_max}")
-
         })
-
-
-
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
