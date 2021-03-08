@@ -81,13 +81,13 @@ class ForecastAdapter(private val listData: WeatherResult) :
             tv_dt_txt.text = SimpleDateFormat(
                 "dd/MM/yyyy hh:mm a",
                 Locale.ENGLISH
-            ).format(Date(data.list.get(0).dt * 1000L)) //data.list.get(0).dt.toString()
+            ).format(Date(data.list.get(0).dt * 1000L))
             tv_main_temp_.text = "${data.list.get(0).main.temp.toString().subSequence(0, 2)}°C"
             tv_mix_temp.text =
                 "${
                     data.list.get(0).main.temp_max.toString().subSequence(0, 2)
                 }°/${data.list.get(0).main.temp_min.toString().subSequence(0, 2)}° Feels like ${
-                    data.list.get(0).main.feels_like
+                    data.list.get(0).main.feels_like.toString().subSequence(0, 2)
                 }°"
             tv_weather_main_.text = data.list.get(0).weather[0].main
 
