@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginLeft="2dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dp"
+        android:layout_marginLeft="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dt_txt_1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Hoje"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_max_1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="28°"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_min_1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="29°"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_city_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dt_txt_2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Seg"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_max_2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="28°"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_min_2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="29°"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_city_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dt_txt_3"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Ter"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_max_3"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="28°"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_min_3"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="29°"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_city_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dt_txt_4"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Qua"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_max_4"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="28°"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_min_4"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="29°"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_city_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="9dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_dt_txt_5"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Qui"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_max_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="28°"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_min_5"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="29°"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_city_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_dt_txt_6"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="Sex"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_max_6"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="28°"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp_min_6"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:hint="29°"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
