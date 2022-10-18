@@ -30,16 +30,16 @@ class ForecastAdapter(private val listData: WeatherResult) :
     override fun getItemCount() = listOf(listData).size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(listData)
+        //holder.bindView(listData)
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //card 1
-        private val tv_city_name: TextView = itemView.findViewById(R.id.tv_city_name)
-        private val tv_dt_txt: TextView = itemView.findViewById(R.id.tv_dt_txt)
-        private val tv_main_temp_: TextView = itemView.findViewById(R.id.tv_main_temp_)
-        private val tv_mix_temp: TextView = itemView.findViewById(R.id.tv_mix_temp)
-        private val tv_weather_main_: TextView = itemView.findViewById(R.id.tv_weather_main_)
+//        private val tv_city_name: TextView = itemView.findViewById(R.id.tv_city_name)
+//        private val tv_dt_txt: TextView = itemView.findViewById(R.id.tv_dt_txt)
+//        private val tv_main_temp_: TextView = itemView.findViewById(R.id.tv_main_temp_)
+//        private val tv_mix_temp: TextView = itemView.findViewById(R.id.tv_mix_temp)
+//        private val tv_weather_main_: TextView = itemView.findViewById(R.id.tv_weather_main_)
 
         //card 2 hoje
         private val tv_dt_txt_1: TextView = itemView.findViewById(R.id.tv_dt_txt_1)
@@ -84,19 +84,19 @@ class ForecastAdapter(private val listData: WeatherResult) :
         @RequiresApi(Build.VERSION_CODES.O)
         fun bindView(data: WeatherResult) {
             //card 1
-            tv_city_name.text = data.city.name
-            tv_dt_txt.text = SimpleDateFormat(
-                "dd/MM/yyyy hh:mm a",
-                Locale.ENGLISH
-            ).format(Date(data.list.get(0).dt * 1000L)) //data.list.get(0).dt.toString()
-            tv_main_temp_.text = "${data.list.get(0).main.temp.toString().subSequence(0, 2)}°C"
-            tv_mix_temp.text =
-                "${
-                    data.list.get(0).main.temp_max.toString().subSequence(0, 2)
-                }°/${data.list.get(0).main.temp_min.toString().subSequence(0, 2)}° Feels like ${
-                    data.list.get(0).main.feels_like.toString().subSequence(0, 2)
-                }°"
-            tv_weather_main_.text = data.list.get(0).weather[0].main
+//            tv_city_name.text = data.city.name
+//            tv_dt_txt.text = SimpleDateFormat(
+//                "dd/MM/yyyy hh:mm a",
+//                Locale.ENGLISH
+//            ).format(Date(data.list.get(0).dt * 1000L)) //data.list.get(0).dt.toString()
+//            tv_main_temp_.text = "${data.list.get(0).main.temp.toString().subSequence(0, 2)}°C"
+//            tv_mix_temp.text =
+//                "${
+//                    data.list.get(0).main.temp_max.toString().subSequence(0, 2)
+//                }°/${data.list.get(0).main.temp_min.toString().subSequence(0, 2)}° Feels like ${
+//                    data.list.get(0).main.feels_like.toString().subSequence(0, 2)
+//                }°"
+//            tv_weather_main_.text = data.list.get(0).weather[0].main
             /**
              * DOMINGO 7  -  1  elemento
              * SEGUNDA 8  -  8 elemento
