@@ -12,22 +12,20 @@
         android:id="@+id/cv_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         app:cardCornerRadius="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_block1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="24dp">
 
             <ImageView
                 android:id="@+id/iv_location_block1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
                 android:src="@drawable/ic_location_24"
+                app:layout_constraintBottom_toBottomOf="@id/tv_location_block1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_location_block1" />
 
@@ -35,7 +33,6 @@
                 android:id="@+id/tv_location_block1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:hint="Distrito Industrial I"
                 android:textAllCaps="true"
                 android:textSize="24sp"
@@ -45,9 +42,8 @@
 
             <TextView
                 android:id="@+id/tv_date_block1"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:hint="seg, 17 de outubro 17:19"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,30 +53,38 @@
                 android:id="@+id/iv_ic_weather_block1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/ic_cloud_32"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
                 app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
 
             <TextView
                 android:id="@+id/tv_current_temperature_block1"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:hint="28°"
-                android:textSize="60sp"
+                android:hint="28"
+                android:textSize="70sp"
                 app:layout_constraintStart_toEndOf="@id/iv_ic_weather_block1"
                 app:layout_constraintTop_toBottomOf="@id/tv_date_block1" />
+            <TextView
+                android:id="@+id/tv_current_temperature_degree_block1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="°"
+                android:textSize="70sp"
+                app:layout_constraintStart_toEndOf="@id/tv_current_temperature_block1"
+                app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
+                app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
 
             <TextView
                 android:id="@+id/tv_temperature_description_block1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="20dp"
                 android:gravity="end"
                 android:hint="Chuva Fraca e trovoada"
                 android:textSize="14sp"
@@ -89,9 +93,8 @@
 
             <TextView
                 android:id="@+id/tv_max_min_temperature_block1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:gravity="end"
                 android:hint="30º/24º"
                 android:textSize="14sp"
@@ -101,10 +104,9 @@
 
             <TextView
                 android:id="@+id/tv_sensation_temperature_block1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="end"
                 android:hint="Sensação térmica de 24º"
                 android:textSize="14sp"
