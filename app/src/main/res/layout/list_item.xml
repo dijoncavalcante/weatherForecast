@@ -55,8 +55,8 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/ic_cloud_32"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
 
             <TextView
@@ -70,14 +70,15 @@
                 android:textSize="70sp"
                 app:layout_constraintStart_toEndOf="@id/iv_ic_weather_block1"
                 app:layout_constraintTop_toBottomOf="@id/tv_date_block1" />
+
             <TextView
                 android:id="@+id/tv_current_temperature_degree_block1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="°"
                 android:textSize="70sp"
-                app:layout_constraintStart_toEndOf="@id/tv_current_temperature_block1"
                 app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
+                app:layout_constraintStart_toEndOf="@id/tv_current_temperature_block1"
                 app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
 
             <TextView
@@ -111,14 +112,24 @@
                 android:hint="Sensação térmica de 24º"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="@id/include_layout_nex_hours" />
+
+            <include
+                android:id="@+id/include_layout_nex_hours"
+                layout="@layout/list_next_hours"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_current_temperature_block1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_secondary_variant"
@@ -139,15 +150,15 @@
         android:id="@+id/card_container_daily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="24dp"
         app:cardCornerRadius="20dp">
 
-        <include layout="@layout/list_item_next" />
-
+        <include layout="@layout/list_next_days" />
     </androidx.cardview.widget.CardView>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_secondary_variant"

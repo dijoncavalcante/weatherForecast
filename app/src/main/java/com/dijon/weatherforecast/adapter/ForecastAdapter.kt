@@ -67,15 +67,15 @@ class ForecastAdapter(private val listData: WeatherResult) :
         private val tv_main_temp_min_5: TextView = itemView.findViewById(R.id.tv_main_temp_min_5)
 
         //card Sex
-        private val tv_dt_txt_6: TextView = itemView.findViewById(R.id.tv_dt_txt_6)
-        private val tv_main_temp_max_6: TextView = itemView.findViewById(R.id.tv_main_temp_max_6)
-        private val tv_main_temp_min_6: TextView = itemView.findViewById(R.id.tv_main_temp_min_6)
+//        private val tv_dt_txt_6: TextView = itemView.findViewById(R.id.tv_dt_txt_6)
+//        private val tv_main_temp_max_6: TextView = itemView.findViewById(R.id.tv_main_temp_max_6)
+//        private val tv_main_temp_min_6: TextView = itemView.findViewById(R.id.tv_main_temp_min_6)
 
-        //card 3 Detail
-        private val tv_city_population: TextView = itemView.findViewById(R.id.tv_city_population)
-        private val tv_city_sunrise: TextView = itemView.findViewById(R.id.tv_city_sunrise)
-        private val tv_city_sunset: TextView = itemView.findViewById(R.id.tv_city_sunset)
-        private val tv_main_humidity: TextView = itemView.findViewById(R.id.tv_main_humidity)
+//        //card 3 Detail
+//        private val tv_city_population: TextView = itemView.findViewById(R.id.tv_city_population)
+//        private val tv_city_sunrise: TextView = itemView.findViewById(R.id.tv_city_sunrise)
+//        private val tv_city_sunset: TextView = itemView.findViewById(R.id.tv_city_sunset)
+//        private val tv_main_humidity: TextView = itemView.findViewById(R.id.tv_main_humidity)
 
         //
         private val tv_dt_txt_last_update: TextView =
@@ -157,21 +157,21 @@ class ForecastAdapter(private val listData: WeatherResult) :
                 resultados[4].main.temp_min.toString().subSequence(0, 2)
             }°".also { tv_main_temp_min_5.text = it }
             //card Sex
-            tv_dt_txt_6.text = checkDayOfWeek(resultados[5].dt_txt)
-            "${
-                resultados[5].main.temp_max.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_max_6.text = it }
-            "${
-                resultados[5].main.temp_min.toString().subSequence(0, 2)
-            }°".also { tv_main_temp_min_6.text = it }
+//            tv_dt_txt_6.text = checkDayOfWeek(resultados[5].dt_txt)
+//            "${
+//                resultados[5].main.temp_max.toString().subSequence(0, 2)
+//            }°".also { tv_main_temp_max_6.text = it }
+//            "${
+//                resultados[5].main.temp_min.toString().subSequence(0, 2)
+//            }°".also { tv_main_temp_min_6.text = it }
 
             //card 3 Detail
-            tv_city_population.text = data.city.population.toString()
-            tv_city_sunrise.text =
-                SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(data.city.sunrise * 1000L))
-            tv_city_sunset.text =
-                SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(data.city.sunset * 1000L))
-            tv_main_humidity.text = data.list.get(0).main.humidity.toString() + "%";
+//            tv_city_population.text = data.city.population.toString()
+//            tv_city_sunrise.text =
+//                SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(data.city.sunrise * 1000L))
+//            tv_city_sunset.text =
+//                SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(data.city.sunset * 1000L))
+//            tv_main_humidity.text = data.list.get(0).main.humidity.toString() + "%";
 
             //card 4 Data last update
             ("${checkDayOfWeek(Calendar.getInstance().get(Calendar.DAY_OF_WEEK))} " +
