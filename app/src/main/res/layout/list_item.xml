@@ -150,7 +150,6 @@
         android:id="@+id/card_container_daily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp"
         app:cardCornerRadius="20dp">
 
         <include layout="@layout/list_next_days" />

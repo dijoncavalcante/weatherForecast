@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="24dp">
 
     <LinearLayout
         android:id="@+id/ll_day1"
@@ -14,13 +15,8 @@
 
         <TextView
             android:id="@+id/tv_day1"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:text="Hoje"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="Hoje" />
 
         <LinearLayout
             android:id="@+id/ll_day1_humidity"
@@ -42,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="17%"
+                android:text="17%"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -62,13 +58,8 @@
 
         <TextView
             android:id="@+id/tv_day1_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
 
 
     </LinearLayout>
@@ -77,18 +68,14 @@
         android:id="@+id/ll_day2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_day2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="segunda-feira"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="segunda-feira" />
 
         <LinearLayout
             android:id="@+id/ll_day2_humidity"
@@ -110,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="17%"
+                android:text="17%"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -130,31 +117,22 @@
 
         <TextView
             android:id="@+id/tv_day2_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_day3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_day3"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="terça-feira"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="terça-feira" />
 
         <LinearLayout
             android:id="@+id/ll_day3_humidity"
@@ -176,7 +154,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="29°"
+                android:text="29°"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -196,31 +174,22 @@
 
         <TextView
             android:id="@+id/tv_day3_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_day4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_day4"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="quarta-feira"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="quarta-feira" />
 
         <LinearLayout
             android:id="@+id/ll_day4_humidity"
@@ -242,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="29°"
+                android:text="29°"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -263,31 +232,22 @@
 
         <TextView
             android:id="@+id/tv_day4_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_day5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_day5"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="quinta-feira"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="quinta-feira" />
 
         <LinearLayout
             android:id="@+id/ll_day5_humidity"
@@ -309,7 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="29°"
+                android:text="29°"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -329,31 +289,22 @@
 
         <TextView
             android:id="@+id/tv_day5_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_day6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_day6"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="sexta-feira"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="sexta-feira" />
 
         <LinearLayout
             android:id="@+id/ll_day6_humidity"
@@ -375,7 +326,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="29°"
+                android:text="29°"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -396,31 +347,22 @@
 
         <TextView
             android:id="@+id/tv_day6_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_day7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_day7"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="sábado"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            style="@style/textViewDayOfWeek"
+            android:text="sábado" />
 
         <LinearLayout
             android:id="@+id/ll_day7_humidity"
@@ -442,7 +384,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:hint="29°"
+                android:text="29°"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -463,12 +405,7 @@
 
         <TextView
             android:id="@+id/tv_day7_temp_max_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:gravity="center_horizontal"
-            android:hint="32°/32°"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/textViewTemperatureMaxMin"
+            android:text="32°/32°" />
     </LinearLayout>
 </LinearLayout>
