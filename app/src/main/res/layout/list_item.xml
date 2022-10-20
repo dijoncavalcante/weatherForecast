@@ -12,9 +12,11 @@
         android:id="@+id/cv_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:cardCornerRadius="20dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+
             android:id="@+id/cl_block1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -86,8 +88,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:ellipsize="end"
                 android:gravity="end"
                 android:hint="Chuva Fraca e trovoada"
+                android:maxLines="1"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
@@ -96,8 +100,10 @@
                 android:id="@+id/tv_max_min_temperature_block1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
                 android:gravity="end"
                 android:hint="30º/24º"
+                android:maxLines="1"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_sensation_temperature_block1"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -108,8 +114,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:ellipsize="end"
                 android:gravity="end"
                 android:hint="Sensação térmica de 24º"
+                android:maxLines="1"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
                 app:layout_constraintEnd_toEndOf="@id/include_layout_nex_hours" />
@@ -150,6 +158,7 @@
         android:id="@+id/card_container_daily"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:cardCornerRadius="20dp">
 
         <include layout="@layout/list_next_days" />
@@ -198,9 +207,7 @@
 
                     <ImageView
                         android:id="@+id/iv_population"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_population_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -208,25 +215,15 @@
 
                     <TextView
                         android:id="@+id/tv_population_label"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginBottom="32dp"
+                        style="@style/textViewDescriptionDetailHome"
                         android:text="População"
-                        android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@id/iv_population"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_city_population"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp"
-                        android:gravity="right"
+                        style="@style/textViewValueDetailHome"
                         android:text="1598210"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_population_label"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/tv_population_label" />
@@ -245,9 +242,7 @@
 
                     <ImageView
                         android:id="@+id/iv_sunrise"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_city_sunrise_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -291,9 +286,7 @@
 
                     <ImageView
                         android:id="@+id/iv_sunset"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_city_sunset_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -338,9 +331,7 @@
 
                     <ImageView
                         android:id="@+id/iv_humidity"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_main_humidity_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -385,9 +376,7 @@
 
                     <ImageView
                         android:id="@+id/iv_wind"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_wind_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -432,9 +421,7 @@
 
                     <ImageView
                         android:id="@+id/iv_aqi"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_aqi_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -484,9 +471,7 @@
 
                     <ImageView
                         android:id="@+id/iv_difficult_to_drive"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_difficult_to_drive_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -530,9 +515,7 @@
 
                     <ImageView
                         android:id="@+id/iv_polen"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_polen_label"
                         app:layout_constraintStart_toStartOf="parent"
@@ -576,9 +559,7 @@
 
                     <ImageView
                         android:id="@+id/iv_runner"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginStart="24dp"
+                        style="@style/imageViewDetailHome"
                         android:src="@drawable/ic_location_24"
                         app:layout_constraintBottom_toBottomOf="@id/tv_runner_label"
                         app:layout_constraintStart_toStartOf="parent"
