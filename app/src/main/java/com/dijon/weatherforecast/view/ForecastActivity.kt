@@ -19,8 +19,8 @@ class ForecastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forecast)
 
-        val rv_home_main: RecyclerView = findViewById(R.id.rv_home_main)
-        rv_home_main.layoutManager = LinearLayoutManager(this)
+//        val rv_home_main: RecyclerView = findViewById(R.id.rv_home_main)
+//        rv_home_main.layoutManager = LinearLayoutManager(this)
 
         val viewModel = ViewModelProvider(this).get(ForecastViewModel::class.java)
         viewModel.getForecast()
@@ -28,7 +28,7 @@ class ForecastActivity : AppCompatActivity() {
         viewModel.results.observe(this, Observer {
             //set adapter com a lista
             val adapterForecastAdapter = ForecastAdapter(it)
-            rv_home_main.adapter = adapterForecastAdapter;
+//            rv_home_main.adapter = adapterForecastAdapter;
 
             Log.d("ForecastActivity", "getForecast: ${it!!.city.name}")
 //            Log.d("ForecastActivity", "getForecast: ${it!!.list[0].weather[0].description}")

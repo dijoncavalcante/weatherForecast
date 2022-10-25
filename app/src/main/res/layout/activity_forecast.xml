@@ -1,12 +1,548 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/themeBgHome"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="8dp"
     android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_home_main"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_location"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_block1"
+            style="@style/cardView_style_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp">
+
+            <ImageView
+                android:id="@+id/iv_location_block1"
+                style="@style/imageView_style_tint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_24"
+                app:layout_constraintBottom_toBottomOf="@id/tv_location_block1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_location_block1" />
+
+            <TextView
+                android:id="@+id/tv_location_block1"
+                style="@style/textView_style_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Distrito Industrial I"
+                android:textAllCaps="true"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/iv_location_block1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_date_block1"
+                style="@style/textView_style_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="seg, 17 de outubro 17:19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_location_block1" />
+
+            <ImageView
+                android:id="@+id/iv_ic_weather_block1"
+                style="@style/imageView_style_tint"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_cloud_32"
+                app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
+
+            <TextView
+                android:id="@+id/tv_current_temperature_block1"
+                style="@style/textView_style_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="28"
+                android:textSize="70sp"
+                app:layout_constraintStart_toEndOf="@id/iv_ic_weather_block1"
+                app:layout_constraintTop_toBottomOf="@id/tv_date_block1" />
+
+            <TextView
+                android:id="@+id/tv_current_temperature_degree_block1"
+                style="@style/textView_style_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="°"
+                android:textSize="70sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
+                app:layout_constraintStart_toEndOf="@id/tv_current_temperature_block1"
+                app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
+
+            <TextView
+                android:id="@+id/tv_temperature_description_block1"
+                style="@style/textView_style_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:text="Chuva Fraca e trovoada"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_current_temperature_block1" />
+
+            <TextView
+                android:id="@+id/tv_max_min_temperature_block1"
+                style="@style/textView_style_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:text="30º/24º"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_sensation_temperature_block1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_temperature_description_block1" />
+
+            <TextView
+                android:id="@+id/tv_sensation_temperature_block1"
+                style="@style/textView_style_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ellipsize="end"
+                android:gravity="end"
+                android:maxLines="1"
+                android:text="Sensação térmica de 24º"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_current_temperature_block1"
+                app:layout_constraintEnd_toEndOf="@id/include_layout_nex_hours" />
+
+            <include
+                android:id="@+id/include_layout_nex_hours"
+                layout="@layout/list_next_hours"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_current_temperature_block1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/tv_Daily"
+        style="@style/textView_style_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Daily"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:cardCornerRadius="20dp">
+
+        <include layout="@layout/list_next_days" />
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/tv_detail_txt"
+        style="@style/textView_style_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Detail"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_container_detail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_card_detail"
+                    style="@style/cardView_style_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_population"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_population_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_population_label" />
+
+                    <TextView
+                        android:id="@+id/tv_population_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="População"
+                        app:layout_constraintStart_toEndOf="@id/iv_population"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_city_population"
+                        style="@style/textViewValueDetailHome"
+                        android:text="1598210"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_population_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_population_label" />
+
+                    <View
+                        android:id="@+id/view_divider_population"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/design_default_color_secondary_variant"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_city_population"
+                        app:layout_constraintStart_toStartOf="@id/tv_population_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_population_label" />
+
+                    <ImageView
+                        android:id="@+id/iv_sunrise"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunrise_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_city_sunrise_label" />
+
+                    <TextView
+                        android:id="@+id/tv_city_sunrise_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Nascer do Sol"
+                        app:layout_constraintStart_toEndOf="@id/iv_sunrise"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_population" />
+
+                    <TextView
+                        android:id="@+id/tv_city_sunrise"
+                        style="@style/textViewValueDetailHome"
+                        android:text="1614938824"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunrise_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_city_sunrise_label" />
+
+                    <View
+                        android:id="@+id/view_divider_sunrise"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/design_default_color_secondary_variant"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_city_sunrise"
+                        app:layout_constraintStart_toStartOf="@id/tv_city_sunrise_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_city_sunrise_label" />
+
+                    <ImageView
+                        android:id="@+id/iv_sunset"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunset_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_city_sunset_label" />
+
+                    <TextView
+                        android:id="@+id/tv_city_sunset_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Pôr-do-sol"
+                        app:layout_constraintStart_toEndOf="@id/iv_sunset"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_sunrise" />
+
+                    <TextView
+                        android:id="@+id/tv_city_sunset"
+                        style="@style/textViewValueDetailHome"
+                        android:text="1614982579"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunset_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_city_sunset_label" />
+
+                    <View
+                        android:id="@+id/view_divider_sunset"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/design_default_color_secondary_variant"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_city_sunset"
+                        app:layout_constraintStart_toStartOf="@id/tv_city_sunset_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_city_sunset_label" />
+
+                    <ImageView
+                        android:id="@+id/iv_humidity"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_main_humidity_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_main_humidity_label" />
+
+                    <TextView
+                        android:id="@+id/tv_main_humidity_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Humidade"
+                        app:layout_constraintStart_toEndOf="@id/iv_humidity"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_sunset" />
+
+                    <TextView
+                        android:id="@+id/tv_main_humidity"
+                        style="@style/textViewValueDetailHome"
+                        android:text="97%"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_main_humidity_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_main_humidity_label" />
+
+                    <View
+                        android:id="@+id/view_divider_humidity"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/design_default_color_secondary_variant"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_main_humidity"
+                        app:layout_constraintStart_toStartOf="@id/tv_main_humidity_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_main_humidity_label" />
+
+                    <ImageView
+                        android:id="@+id/iv_wind"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_wind_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_wind_label" />
+
+                    <TextView
+                        android:id="@+id/tv_wind_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Vento"
+                        app:layout_constraintStart_toEndOf="@id/iv_wind"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_humidity" />
+
+                    <TextView
+                        android:id="@+id/tv_wind"
+                        style="@style/textViewValueDetailHome"
+                        android:text="3 km/h"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_wind_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_wind_label" />
+
+                    <View
+                        android:id="@+id/view_divider_wind"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/design_default_color_secondary_variant"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_wind"
+                        app:layout_constraintStart_toStartOf="@id/tv_wind_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_wind_label" />
+
+                    <ImageView
+                        android:id="@+id/iv_aqi"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_aqi_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_aqi_label" />
+
+                    <TextView
+                        android:id="@+id/tv_aqi_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="AQI"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_aqi"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_wind" />
+
+                    <TextView
+                        android:id="@+id/tv_aqi"
+                        style="@style/textViewValueDetailHome"
+                        android:text="Moderada(63)"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_aqi_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_aqi_label" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_container_detail2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_container_detail1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_card_detail"
+                    style="@style/cardView_style_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_difficult_to_drive"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_difficult_to_drive_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_difficult_to_drive_label" />
+
+                    <TextView
+                        android:id="@+id/tv_difficult_to_drive_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Dificuldade para dirigir"
+                        app:layout_constraintStart_toEndOf="@id/iv_difficult_to_drive"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_difficult_to_drive"
+                        style="@style/textViewValueDetailHome"
+                        android:text="Molhado"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_difficult_to_drive_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_difficult_to_drive_label" />
+
+                    <View
+                        android:id="@+id/view_divider_difficult_to_drive"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_difficult_to_drive"
+                        app:layout_constraintStart_toStartOf="@id/tv_difficult_to_drive_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_difficult_to_drive_label" />
+                    <!--                    android:background="@color/design_default_color_secondary_variant"-->
+
+                    <ImageView
+                        android:id="@+id/iv_polen"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_polen_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_polen_label" />
+
+                    <TextView
+                        android:id="@+id/tv_polen_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Pólen"
+                        app:layout_constraintStart_toEndOf="@id/iv_polen"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_difficult_to_drive" />
+
+                    <TextView
+                        android:id="@+id/tv_polen"
+                        style="@style/textViewValueDetailHome"
+                        android:text="Baixo"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_polen_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_polen_label" />
+
+                    <View
+                        android:id="@+id/view_divider_polen"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@color/design_default_color_secondary_variant"
+                        android:focusable="false"
+                        app:layout_constraintEnd_toEndOf="@id/tv_polen"
+                        app:layout_constraintStart_toStartOf="@id/tv_polen_label"
+                        app:layout_constraintTop_toBottomOf="@id/tv_polen_label" />
+
+                    <ImageView
+                        android:id="@+id/iv_runner"
+                        style="@style/imageViewDetailHome"
+                        android:src="@drawable/ic_location_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_runner_label"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_runner_label" />
+
+                    <TextView
+                        android:id="@+id/tv_runner_label"
+                        style="@style/textViewDescriptionDetailHome"
+                        android:text="Corrida"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_runner"
+                        app:layout_constraintTop_toBottomOf="@id/view_divider_polen" />
+
+                    <TextView
+                        android:id="@+id/tv_runner"
+                        style="@style/textViewValueDetailHome"
+                        android:text="Muito ruim"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_runner_label"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_runner_label" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false" />
+
+    <TextView
+        android:id="@+id/tv_dt_txt_last_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="2021-03-05 21:00:00" />
 </LinearLayout>
