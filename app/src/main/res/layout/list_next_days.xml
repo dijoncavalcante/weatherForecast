@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/cardView_style_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
@@ -28,6 +29,7 @@
 
             <ImageView
                 android:id="@+id/iv_day1_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -44,6 +46,7 @@
 
         <ImageView
             android:id="@+id/iv_day1_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -51,6 +54,7 @@
 
         <ImageView
             android:id="@+id/iv_day1_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -87,6 +91,7 @@
 
             <ImageView
                 android:id="@+id/iv_day2_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -103,6 +108,7 @@
 
         <ImageView
             android:id="@+id/iv_day2_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -110,6 +116,7 @@
 
         <ImageView
             android:id="@+id/iv_day2_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -144,6 +151,7 @@
 
             <ImageView
                 android:id="@+id/iv_day3_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -160,6 +168,7 @@
 
         <ImageView
             android:id="@+id/iv_day3_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -167,6 +176,7 @@
 
         <ImageView
             android:id="@+id/iv_day3_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -201,6 +211,7 @@
 
             <ImageView
                 android:id="@+id/iv_day4_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -217,6 +228,7 @@
 
         <ImageView
             android:id="@+id/iv_day4_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -224,6 +236,7 @@
 
         <ImageView
             android:id="@+id/iv_day4_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -259,6 +272,7 @@
 
             <ImageView
                 android:id="@+id/iv_day5_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -275,6 +289,7 @@
 
         <ImageView
             android:id="@+id/iv_day5_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -282,6 +297,7 @@
 
         <ImageView
             android:id="@+id/iv_day5_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -316,6 +332,7 @@
 
             <ImageView
                 android:id="@+id/iv_day6_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -332,6 +349,7 @@
 
         <ImageView
             android:id="@+id/iv_day4_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -339,6 +357,7 @@
 
         <ImageView
             android:id="@+id/iv_day6_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -374,6 +393,7 @@
 
             <ImageView
                 android:id="@+id/iv_day7_humidity"
+                style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:gravity="center_horizontal"
@@ -390,6 +410,7 @@
 
         <ImageView
             android:id="@+id/iv_day7_temp1"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"
@@ -397,6 +418,7 @@
 
         <ImageView
             android:id="@+id/iv_day7_temp2"
+            style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_weight="1"

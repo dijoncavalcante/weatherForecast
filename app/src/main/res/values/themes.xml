@@ -14,6 +14,22 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="themeBgHome">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="textView_style_color">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="imageView_style_tint">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="cardView_style_background">
+        <item name="android:background">@color/white</item>
+    </style>
+
     <style name="textViewDayOfWeek">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
@@ -41,6 +57,7 @@
     <style name="imageViewDetailHome">
         <item name="android:layout_width">40dp</item>
         <item name="android:layout_height">40dp</item>
+        <item name="android:tint">@color/black</item>
         <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">24dp</item>
     </style>
 
@@ -52,6 +69,7 @@
         <item name="android:layout_marginBottom" tools:targetApi="jelly_bean_mr1">32dp</item>
         <item name="android:layout_marginTop" tools:targetApi="jelly_bean_mr1">32dp</item>
     </style>
+
     <style name="textViewValueDetailHome">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -59,6 +77,7 @@
         <item name="android:gravity">right</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 </resources>
