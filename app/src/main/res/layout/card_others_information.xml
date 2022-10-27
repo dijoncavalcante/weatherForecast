@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_card_detail"
+    style="@style/cardView_style_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_difficult_to_drive"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_difficult_to_drive_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_difficult_to_drive_label" />
+
+    <TextView
+        android:id="@+id/tv_difficult_to_drive_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Dificuldade para dirigir"
+        app:layout_constraintStart_toEndOf="@id/iv_difficult_to_drive"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_difficult_to_drive"
+        style="@style/textViewValueDetailHome"
+        android:text="Molhado"
+        app:layout_constraintBottom_toBottomOf="@id/tv_difficult_to_drive_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_difficult_to_drive_label" />
+
+    <View
+        android:id="@+id/view_divider_difficult_to_drive"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_difficult_to_drive"
+        app:layout_constraintStart_toStartOf="@id/tv_difficult_to_drive_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_difficult_to_drive_label" />
+
+    <ImageView
+        android:id="@+id/iv_polen"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_polen_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_polen_label" />
+
+    <TextView
+        android:id="@+id/tv_polen_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Pólen"
+        app:layout_constraintStart_toEndOf="@id/iv_polen"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_difficult_to_drive" />
+
+    <TextView
+        android:id="@+id/tv_polen"
+        style="@style/textViewValueDetailHome"
+        android:text="Baixo"
+        app:layout_constraintBottom_toBottomOf="@id/tv_polen_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_polen_label" />
+
+    <View
+        android:id="@+id/view_divider_polen"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_polen"
+        app:layout_constraintStart_toStartOf="@id/tv_polen_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_polen_label" />
+
+    <ImageView
+        android:id="@+id/iv_runner"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_runner_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_runner_label" />
+
+    <TextView
+        android:id="@+id/tv_runner_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Corrida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_runner"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_polen" />
+
+    <TextView
+        android:id="@+id/tv_runner"
+        style="@style/textViewValueDetailHome"
+        android:text="Muito ruim"
+        app:layout_constraintBottom_toBottomOf="@id/tv_runner_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_runner_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

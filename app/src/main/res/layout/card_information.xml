@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_card_detail"
+    style="@style/cardView_style_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_population"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_population_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_population_label" />
+
+    <TextView
+        android:id="@+id/tv_population_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="População"
+        app:layout_constraintStart_toEndOf="@id/iv_population"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_city_population"
+        style="@style/textViewValueDetailHome"
+        android:text="1598210"
+        app:layout_constraintBottom_toBottomOf="@id/tv_population_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_population_label" />
+
+    <View
+        android:id="@+id/view_divider_population"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_city_population"
+        app:layout_constraintStart_toStartOf="@id/tv_population_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_population_label" />
+
+    <ImageView
+        android:id="@+id/iv_sunrise"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunrise_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_city_sunrise_label" />
+
+    <TextView
+        android:id="@+id/tv_city_sunrise_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Nascer do Sol"
+        app:layout_constraintStart_toEndOf="@id/iv_sunrise"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_population" />
+
+    <TextView
+        android:id="@+id/tv_city_sunrise"
+        style="@style/textViewValueDetailHome"
+        android:text="1614938824"
+        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunrise_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_city_sunrise_label" />
+
+    <View
+        android:id="@+id/view_divider_sunrise"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_city_sunrise"
+        app:layout_constraintStart_toStartOf="@id/tv_city_sunrise_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_city_sunrise_label" />
+
+    <ImageView
+        android:id="@+id/iv_sunset"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunset_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_city_sunset_label" />
+
+    <TextView
+        android:id="@+id/tv_city_sunset_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Pôr-do-sol"
+        app:layout_constraintStart_toEndOf="@id/iv_sunset"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_sunrise" />
+
+    <TextView
+        android:id="@+id/tv_city_sunset"
+        style="@style/textViewValueDetailHome"
+        android:text="1614982579"
+        app:layout_constraintBottom_toBottomOf="@id/tv_city_sunset_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_city_sunset_label" />
+
+    <View
+        android:id="@+id/view_divider_sunset"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_city_sunset"
+        app:layout_constraintStart_toStartOf="@id/tv_city_sunset_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_city_sunset_label" />
+
+    <ImageView
+        android:id="@+id/iv_humidity"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_main_humidity_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_main_humidity_label" />
+
+    <TextView
+        android:id="@+id/tv_main_humidity_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Humidade"
+        app:layout_constraintStart_toEndOf="@id/iv_humidity"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_sunset" />
+
+    <TextView
+        android:id="@+id/tv_main_humidity"
+        style="@style/textViewValueDetailHome"
+        android:text="97%"
+        app:layout_constraintBottom_toBottomOf="@id/tv_main_humidity_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_main_humidity_label" />
+
+    <View
+        android:id="@+id/view_divider_humidity"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_main_humidity"
+        app:layout_constraintStart_toStartOf="@id/tv_main_humidity_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_humidity_label" />
+
+    <ImageView
+        android:id="@+id/iv_wind"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_wind_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_wind_label" />
+
+    <TextView
+        android:id="@+id/tv_wind_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="Vento"
+        app:layout_constraintStart_toEndOf="@id/iv_wind"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_humidity" />
+
+    <TextView
+        android:id="@+id/tv_wind"
+        style="@style/textViewValueDetailHome"
+        android:text="3 km/h"
+        app:layout_constraintBottom_toBottomOf="@id/tv_wind_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_wind_label" />
+
+    <View
+        android:id="@+id/view_divider_wind"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_secondary_variant"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@id/tv_wind"
+        app:layout_constraintStart_toStartOf="@id/tv_wind_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_wind_label" />
+
+    <ImageView
+        android:id="@+id/iv_aqi"
+        style="@style/imageViewDetailHome"
+        android:src="@drawable/ic_location_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_aqi_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_aqi_label" />
+
+    <TextView
+        android:id="@+id/tv_aqi_label"
+        style="@style/textViewDescriptionDetailHome"
+        android:text="AQI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_aqi"
+        app:layout_constraintTop_toBottomOf="@id/view_divider_wind" />
+
+    <TextView
+        android:id="@+id/tv_aqi"
+        style="@style/textViewValueDetailHome"
+        android:text="Moderada(63)"
+        app:layout_constraintBottom_toBottomOf="@id/tv_aqi_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_aqi_label" />
+</androidx.constraintlayout.widget.ConstraintLayout>

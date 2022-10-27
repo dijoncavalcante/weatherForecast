@@ -10,9 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dijon.weatherforecast.R
 import com.dijon.weatherforecast.model.ListResult
 import com.dijon.weatherforecast.model.WeatherResult
-import com.dijon.weatherforecast.view.ForecastViewModel
-import com.google.gson.annotations.SerializedName
-import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -23,7 +20,7 @@ class ForecastAdapter(private val listData: WeatherResult) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForecastAdapter.ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.card_information, parent, false)
         )
     }
 
