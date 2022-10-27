@@ -15,7 +15,7 @@
     </style>
 
     <style name="themeBgHome">
-        <item name="android:background">@color/white</item>
+        <item name="android:background">@color/white_10</item>
     </style>
 
     <style name="textView_style_color">

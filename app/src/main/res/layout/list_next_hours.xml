@@ -6,7 +6,7 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:id="@+id/card_container_1"
+        android:id="@+id/ll_container_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -46,7 +46,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/iv_first_hour"
+                android:id="@+id/iv_first_hour_humidity"
                 style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
@@ -97,14 +97,14 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/card_container_1"
+            android:id="@+id/card_container_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/iv_first_hour"
+                android:id="@+id/iv_second_hour_humidity"
                 style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
@@ -155,14 +155,14 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/card_container_1"
+            android:id="@+id/card_container_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/iv_first_hour"
+                android:id="@+id/iv_third_hour_humidity"
                 style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
@@ -213,14 +213,14 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/card_container_1"
+            android:id="@+id/card_container_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/iv_first_hour"
+                android:id="@+id/iv_fourth_hour_humidity"
                 style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
@@ -271,14 +271,14 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/card_container_1"
+            android:id="@+id/card_container_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/iv_first_hour"
+                android:id="@+id/iv_fifth_hour_humidity"
                 style="@style/imageView_style_tint"
                 android:layout_width="16dp"
                 android:layout_height="16dp"

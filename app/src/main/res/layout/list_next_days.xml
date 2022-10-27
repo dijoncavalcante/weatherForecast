@@ -348,7 +348,7 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/iv_day4_temp1"
+            android:id="@+id/iv_day6_temp1"
             style="@style/imageView_style_tint"
             android:layout_width="24dp"
             android:layout_height="24dp"
