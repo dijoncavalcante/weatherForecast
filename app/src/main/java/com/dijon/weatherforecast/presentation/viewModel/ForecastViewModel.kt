@@ -1,4 +1,4 @@
-package com.dijon.weatherforecast.view
+package com.dijon.weatherforecast.presentation.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
